@@ -13,8 +13,8 @@ for line in f.readlines():
         mode=re.compile(line)
         continue
     if(mode_on and len(line.strip())):
-        if(re.match(r"^[0-9]+.",line.strip())):
-            line=re.sub(r"^[0-9]+.", "", line.strip())
+        if(re.match(r"^[0-9]+\..",line.strip())):
+            line=re.sub(r"^[0-9]+\.", "", line.strip())
         if(mode.match(line.strip())):
             line=line.strip()
             line=str(i)+"."+line+"\n"
